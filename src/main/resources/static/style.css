@@ -1,0 +1,137 @@
+/* Цветовая палитра */
+:root {
+    --coffee: #6f4e37;
+    --cream: #f3e5ab;
+    --dark-coffee: #4b3621;
+    --light-cream: #fdf6e3;
+    --accent: #a1866f;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--light-cream);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--coffee);
+    border-bottom: 4px solid var(--accent);
+    padding: 1rem;
+    color: white;
+}
+
+.header-logo{
+    height: 85px;
+    filter: drop-shadow(0 0 0 white) drop-shadow(0 0 3px white);
+    object-fit: contain;
+}
+
+.container {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+main {
+    flex: 3;
+}
+
+aside {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.post-list h2,
+.form-section h2,
+.archive-section h2 {
+    border-bottom: 2px solid var(--accent);
+    color: var(--coffee);
+    padding-bottom: 0.5rem;
+}
+
+/* Карточка рецепта */
+article {
+    border: dashed 0.1rem var(--coffee);
+    border-radius: 15px;
+    box-shadow: 0.5em 1em 0.5em 0em rgba(111, 78, 55, 0.2);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--cream);
+}
+
+article h1 {
+    margin: 0 0 0.5rem;
+}
+
+article p {
+    margin: 0.3rem 0;
+}
+
+article button {
+    margin-right: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: var(--coffee);
+    color: white;
+}
+
+.delete-btn {
+    background-color: #a64d4d;
+    color: white;
+}
+
+.archive-btn {
+    background-color: var(--accent);
+    color: white;
+}
+
+/* Форма создания рецепта */
+form label {
+    display: block;
+    margin-bottom: 0.7rem;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.4rem;
+    border: none;
+    border-bottom: 2px solid var(--coffee);
+    background-color: var(--light-cream);
+    resize: vertical;
+}
+
+form button {
+    background-color: var(--coffee);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:focus {
+    background-color: var(--accent);
+}
+
+/* Секции: форма и архив */
+.form-section,
+.archive-section {
+    border: dashed 0.1rem var(--coffee);
+    border-radius: 15px;
+    box-shadow: 0.5em 1em 0.5em 0em rgba(111, 78, 55, 0.2);
+    background-color: var(--cream);
+    padding: 1rem;
+}
