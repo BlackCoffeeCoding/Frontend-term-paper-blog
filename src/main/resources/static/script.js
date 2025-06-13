@@ -3,13 +3,11 @@ const articles = document.getElementById('articles');
 const archive = document.getElementById('archive');
 const API_URL = 'http://localhost:8080/api/recipes';
 
-// Загрузка рецептов и архива при старте
 window.addEventListener('DOMContentLoaded', () => {
     loadRecipes();
     loadArchive();
 });
 
-// Обработка формы создания рецепта
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -34,7 +32,6 @@ form.addEventListener('submit', function (e) {
         .catch(err => console.error('Ошибка создания рецепта:', err));
 });
 
-// Загрузка и отображение всех рецептов
 function loadRecipes() {
     fetch(API_URL)
         .then(res => res.json())
@@ -45,7 +42,6 @@ function loadRecipes() {
         .catch(err => console.error('Ошибка загрузки:', err));
 }
 
-// Загрузка и отображение архива
 function loadArchive() {
     fetch(API_URL + '/archived')
         .then(res => res.json())
@@ -60,7 +56,6 @@ function loadArchive() {
         .catch(err => console.error('Ошибка загрузки архива:', err));
 }
 
-// Добавление одного рецепта на страницу
 function addArticleToPage(recipe) {
     const article = document.createElement('article');
 
